@@ -47,13 +47,14 @@ var promptUser = function (res) {
 
         // Make correct false
         var correct = false;
+
         // If user provides Q, exit the process
         if (answer.choice.toUpperCase() == "Q") {
             process.exit();
         }
 
-
         for (var i = 0; i < res.length; i++) {
+
             // If the product name equals the user input choice, peform the following 
             if (res[i].prodname == answer.choice) {
                 correct = true;
@@ -80,9 +81,9 @@ var promptUser = function (res) {
                             console.log("Prouduct Purchased!");
                             makeATable();
                         })
-                        // If the user does not provide valid input, response with the following message
+                        // If the user requested a quanity of items that does not exist, response with the following message
                     } else {
-                        console.log("Not a valid selection!");
+                        console.log("Insufficient quantity!");
                         promptUser(res);
                     }
                 })
