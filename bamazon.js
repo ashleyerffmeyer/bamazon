@@ -28,6 +28,7 @@ var makeATable = function () {
         for (var i = 0; i < res.length; i++) {
             console.log(res[i].itemid + " || " + res[i].prodname + " || " + res[i].deptname + " || " + res[i].price + " || " + res[i].stockqty + "\n")
         }
+
         // Run promptUser function
         promptUser(res);
     })
@@ -89,6 +90,7 @@ var promptUser = function (res) {
                 })
             }
         }
+
         // If the user does not provide valid input, response with the following message
         if (i == res.length && correct == false) {
             console.log("Not a valid selection!");
